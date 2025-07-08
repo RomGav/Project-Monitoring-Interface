@@ -1,0 +1,31 @@
+# Proejct Monitoring Interfae (PMI)
+PMI was made for small to medium sized businesses looking to keep track of the items above and to help increase ability of oversight in the company. The app helps store and monitor information on your Projects, Clients, Account Manaagers, and Project Managers in your company. 
+
+PMI includes the following features:
+- Login security
+- User Registration (Devs Only)
+- Create new saved files for Projects, Clients, Account Managers, and Project Managers
+- Ability to see which manager is involved with which client and project
+- Soft deletion for manager-level access only
+- Saved contact information for Clients, Account Managers, and Project Managers to make communication more efficient
+- List of current projects or accounts of each manager
+    - Also includes a list of inactive clients for account managers
+- Upon registration, a welcome email containing a user's login information will be sent
+
+## Requirements
+- A local or online database to store the inputted data
+- A server to launch and implement the app
+- A computer to manage the app and your database
+- Slight technical knowledge to modify the code
+
+## Installation Notes
+- Create a .env with the same information as the env text and fill out the necessary information
+- Make sure to "npm install" on Git Bash before launching
+- Make a user directly on your database and make sure to set role as Developer
+    - You can also run "node seed.js" to install a test developer account
+        - Email: dev@test.com
+        - Password: devtest
+
+- To start the app "npm run dev" on both folders
+- Login with your Dev account and you now have full access and control of the app
+    - MAke sure to add a proper Developer User and delete the developer test account for security purposes

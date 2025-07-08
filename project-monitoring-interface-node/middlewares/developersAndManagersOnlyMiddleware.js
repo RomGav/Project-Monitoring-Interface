@@ -1,0 +1,32 @@
+import jwt from "jsonwebtoken";
+import userModel from "../models/userModel.js";
+
+const onlyDevelopersAndManagers = async (req,res, next) => {
+    try{
+        if(!req.cookies.token) {
+            return res.status(401).json({error: "Unauthorized Access!"});
+        }
+
+        const token = req.cookies.token
+
+        if(!token) {
+            return res.status(401).json({error: "Unauthorized Access!"});
+        }
+        
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const user = await userModel.findById(decoded.userId);
+
+        if(!user || (user.role !== "Developer" && user.role !== "Manager")){
+            return res.status(403).json({error: "Access denied: Developers and Managers only"})
+        };
+
+        req.user = user;
+
+        next();
+
+    }catch(error){
+        res.status(500).json({error: error.message});
+    };
+}
+
+export {onlyDevelopersAndManagers};
