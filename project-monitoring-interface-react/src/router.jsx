@@ -18,8 +18,8 @@ import PmSolo from './pages/projectManagers/PmSolo';
 import Acms from "./pages/accountManagers/Acms";
 import AcmNew from './pages/accountManagers/AcmNew';
 import AcmEdit from './pages/accountManagers/AcmEdit';
-import AcmGrid from './pages/accountManagers/acmGrid';
-import AcmSolo from './pages/accountManagers/acmSolo';
+import AcmGrid from './pages/accountManagers/AcmGrid';
+import AcmSolo from './pages/accountManagers/AcmSolo';
 
 import Clients from "./pages/clients/Clients";
 import ClientNew from './pages/clients/ClientNew';
