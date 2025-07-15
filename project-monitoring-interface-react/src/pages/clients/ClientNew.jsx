@@ -114,7 +114,7 @@ const ClientNew = () => {
                     </select>
                 </div>
                 <div className="md:col-span-2 flex justify-end">
-                    <button className={buttonClass}>Create New Project</button>
+                    <button className={buttonClass}>Create New Client</button>
                 </div>
             </form>
         </div>
