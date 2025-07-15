@@ -61,7 +61,7 @@ const AcmNew = () => {
                 <h2 className="text-2xl font-bold">New Account Manager:</h2>
             </div>
 
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className={formGroup}>
                     <label className={labelClass}>Account Manager ID:</label>
                     <input type="number" name='accountManagerId' value={form.accountManagerId} onChange={handleChange} className={inputClass}/>
