@@ -57,6 +57,7 @@ const login = async (req, res) => {
             sameSite: "None",
             maxAge: 1800000, //30 min
             path: "/",
+            domain: ".onrender.com",
         });
 
         res.json({message: "Login successful"});
@@ -72,6 +73,7 @@ const logout = async (req, res) => {
             secure: process.env.NODE_ENV === "production",
             sameSite: "None",
             path: "/",
+            domain: ".onrender.com",
         });
 
         res.json({ message: "Logout successful" });
