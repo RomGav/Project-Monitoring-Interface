@@ -47,7 +47,6 @@ const AcmNew = () => {
             console.log(record);
             if (record?.accountManagerId) {
                     navigate(`/dashboard/account-managers/${record.accountManagerId}`);
-                    window.location.reload();
             } else {alert("Failed to create the Account Manager, please check inputs and try again")}
         } catch (error) {
             console.error(error);
