@@ -63,7 +63,6 @@ const PmEdit = () => {
             const record = await res.json();
             console.log("Project Manager updated:", record);
             navigate(`/dashboard/project-managers/${record.projectManagerId}`);
-            window.location.reload();
         } catch (error) {
             console.error("Error updating Project Manager:", error);
         };
@@ -86,7 +85,6 @@ const PmEdit = () => {
             if (res.ok) {
                 console.log("Project Manager deleted:", result);
                 navigate("/dashboard/project-managers");
-                window.location.reload();
             } else {
                 console.error("Failed to delete Project Manager:", result.error);
                 alert(`Error: ${result.error}`);
