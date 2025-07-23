@@ -47,7 +47,6 @@ const PmNew = () => {
             console.log(record);
             if (record?.projectManagerId) {
                     navigate(`/dashboard/projects/${record.projectManagerId}`);
-                    window.location.reload();
             } else {alert("Failed to create the Project Manager, please check inputs and try again")}
         } catch (error) {
             console.error(error);
