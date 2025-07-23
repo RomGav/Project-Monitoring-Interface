@@ -63,7 +63,6 @@ const AcmEdit = () => {
             const record = await res.json();
             console.log("Account Manager updated:", record);
             navigate(`/dashboard/account-managers/${record.accountManagerId}`);
-            window.location.reload();
         } catch (error) {
             console.error("Error updating Account Manager:", error);
         };
@@ -86,7 +85,6 @@ const AcmEdit = () => {
             if (res.ok) {
                 console.log("Account Manager deleted:", result);
                 navigate("/dashboard/account-managers");
-                window.location.reload();
             } else {
                 console.error("Failed to delete Account Manager:", result.error);
                 alert(`Error: ${result.error}`);
