@@ -1,5 +1,5 @@
 services:
-  - type: static
+  - type: web
     name: project-monitoring-interface
     env: static
     buildCommand: npm install && npm run build
