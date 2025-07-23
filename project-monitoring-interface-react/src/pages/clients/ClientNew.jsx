@@ -53,7 +53,6 @@ const ClientNew = () => {
             console.log(record);
             if (record?.clientId) {
                     navigate(`/dashboard/clients/${record.clientId}`);
-                    window.location.reload();
             } else {alert("Failed to create the Client, please check inputs and try again")}
         } catch (error) {
             console.error(error);
