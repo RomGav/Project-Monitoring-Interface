@@ -86,7 +86,6 @@ const ProjectEdit =() => {
             
             if (record?.projectId) {
                 navigate(`/dashboard/projects/${record.projectId}`);
-                window.location.reload();
             } else {alert("Failed to create the project, please check inputs and try again")}
         } catch (error) {
             console.error("Error updating Project:", error);
@@ -110,7 +109,6 @@ const ProjectEdit =() => {
             if (res.ok) {
                 console.log("Project deleted:", result);
                 navigate("/dashboard/projects");
-                window.location.reload();
             } else {
                 console.error("Failed to delete Project:", result.error);
                 alert(`Error: ${result.error}`);
