@@ -18,13 +18,14 @@ const app = express();
 //DB Connection
 connectDB();
 
-//middlewares
-app.use(express.json());
-app.use(cookieParser());
 app.use(cors({
     origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
 }));
+
+//middlewares
+app.use(express.json());
+app.use(cookieParser());
 
 //routes
 app.use("/api/auth", authRoute);
