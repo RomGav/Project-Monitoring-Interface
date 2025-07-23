@@ -34,7 +34,6 @@ const Login = () => {
       if (response.ok) {
         console.log(record)
         navigate("/dashboard");
-        window.location.href = "/dashboard";
       } else {
         console.error("Login failed", record.error);
         alert(record.error);
