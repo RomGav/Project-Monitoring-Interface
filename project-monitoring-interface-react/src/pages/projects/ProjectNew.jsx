@@ -68,7 +68,6 @@ const ProjectNew = () => {
             console.log(record);
             if (record?.projectId) {
                 navigate(`/dashboard/projects/${record.projectId}`);
-                window.location.reload();
             } else {alert("Failed to create the Project, please check inputs and try again")}
         } catch (error) {
             console.error(error);
