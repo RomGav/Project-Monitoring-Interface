@@ -4,7 +4,7 @@ services:
     env: static
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    rootDir: project-monitoring-interface-react
+    rootDir: project-monitoring-interface-react/dist
     routes:
       - type: rewrite
         source: /*
