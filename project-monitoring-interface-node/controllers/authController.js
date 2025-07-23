@@ -56,6 +56,7 @@ const login = async (req, res) => {
             secure: process.env.NODE_ENV === "production",
             sameSite: "None",
             maxAge: 1800000, //30 min
+            path: "/",
         });
 
         res.json({message: "Login successful"});
@@ -70,6 +71,7 @@ const logout = async (req, res) => {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
             sameSite: "None",
+            path: "/",
         });
 
         res.json({ message: "Logout successful" });
