@@ -74,7 +74,6 @@ const ClientEdit =() => {
             console.log("Client updated:", record);
             if (record?.clientId) {
                 navigate(`/dashboard/clients/${record.clientId}`);
-                window.location.reload();
             } else {alert("Failed to create the Client, please check inputs and try again")}
         } catch (error) {
             console.error("Error updating Client:", error);
